@@ -111,13 +111,15 @@ if debug:
 
 
 #################################################
-# dont eat salad, become a tuner
+# dont eat salad, become a tuna
 
 def build_model(hp):
     model = Sequential()
-    model.add(Dense(hp.Int('input_units', min_value=32, max_value=512, step=16), input_dim=(max_len * 2), activation='relu'))
-    for i in range(hp.Int('n_layers', 1, 10)):
-        model.add(Dense(hp.Int(f"conv_{i}_units", min_value=32, max_value=512, step=16), activation='relu'))
+    model.add(Dense(hp.Int('input_units', min_value=32, max_value=512, step=32), input_dim=(max_len * 2), activation='relu'))
+    
+    layer_count = np.square(hp.Int('n_layers', 1, 3))
+    for i in range(layer_count):
+        model.add(Dense(hp.Int(f"conv_{i}_units", min_value=32, max_value=512, step=32), activation='relu'))
 
     model.add(Dense(1, activation='linear'))
 
@@ -138,14 +140,15 @@ tuner.search(x=x_train,
              epochs=100,
              batch_size=32)
 
+tuner.results_summary()
 
 model = tuner.get_best_models()[0]
 
 # watch results
 results = model.predict(x_train)
-for i in range(100):
+'''for i in range(100):
     print('{} and {} should fit {}'.format(x_original[i][0],x_original[i][1],y_original[i]))
-    print('nn calculated: {} \n'.format(results[i]))
+    print('nn calculated: {} \n'.format(results[i]))'''
 
 
 #################################################
