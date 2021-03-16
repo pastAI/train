@@ -9,7 +9,7 @@ The goal was to create an AI that generates a pasta recipe, that only includes t
 ## 1. Best fitting ingredients model
 The dataset used in this model was also create by us. In short, the combined ingredients were extracted out of many recipe datasets to calculate a score that represents how good a combination fits. That scores are saved in a csv, which was the base for the training. 
 
-The model was trained with TensorFlow and optimized with kerastuner.
+The model was trained with TensorFlow and optimized with kerastuner as can be seen in /train/tuned_train.py.
 
 # Usage with docker
  - Install docker
