@@ -9,6 +9,8 @@ The goal was to create an AI that generates a pasta recipe, that only includes t
 ## 1. Best fitting ingredients model
 To create a model it was first needed to create a dataset, with which the model can be trained. For that, a recipe database was used and the combined ingredients were extracted to calculate a score that says how good a combination might fit. 
 
+The model was trained with TensorFlow and optimized with kerastuner.
+
 # Usage with docker
  - Install docker
  - Install docker compose (https://docs.docker.com/compose/install/)
