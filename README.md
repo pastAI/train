@@ -7,7 +7,7 @@ The goal was to create an AI that generates a pasta recipe, that only includes t
 3. generate recipe text and maybe an image (to-do) 
 
 ## 1. Best fitting ingredients model
-To create a model it was first needed to create a dataset, with which the model can be trained. For that, a recipe database was used and the combined ingredients were extracted to calculate a score that says how good a combination might fit. 
+The dataset used in this model was also create by us. In short, the combined ingredients were extracted out of many recipe datasets to calculate a score that represents how good a combination fits. That scores are saved in a csv, which was the base for the training. 
 
 The model was trained with TensorFlow and optimized with kerastuner.
 
