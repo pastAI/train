@@ -6,6 +6,13 @@ The goal was to create an AI that generates a pasta recipe, that only includes t
 2. create logical steps for the recipe (to-do)
 3. generate recipe text and maybe an image (to-do) 
 
+<br/><br/>
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/pastAI/train/master/graphic.jpg" alt="An artistic representation of matrix style lines which morph into hanging spaghetti" width="500">
+ </p>
+<br/><br/>
+
 ## 1. Best fitting ingredients model
 The dataset used in this model was also created by us. In short, the combined ingredients were extracted out of many recipe datasets to calculate a score that represents how good a combination of ingredients works together. Those scores are saved in a csv, which was the base for the training. 
 
