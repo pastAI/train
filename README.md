@@ -1,4 +1,4 @@
-# train
+# pastAI
 Repository for pastAI training
 
 The goal was to create an AI that generates a pasta recipe, that only includes the selected ingredients. The idea was to devide the task in three different models:
